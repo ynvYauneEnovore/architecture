@@ -1,19 +1,17 @@
 <div align="center">
 
-# 🏢 Infrastructure Architecture Overview
+# Infrastructure Architecture Overview
 ### Arquitectura de Infraestructura
 
 ---
 
 </div>
 
-## 📋 Purpose | Propósito
+## Purpose | Propósito
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 Este repositorio define la plataforma completa de **Infraestructura como Código (IaC)** y **GitOps** utilizada para aprovisionar, administrar y observar un ecosistema Kubernetes multiambiente desplegado sobre **AWS EKS** (Elastic Kubernetes Service).
 
@@ -25,8 +23,6 @@ Cumple con los **estándares empresariales 2025**, dando prioridad a:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 This repository defines the complete **Infrastructure as Code (IaC)** and **GitOps-driven platform** used to provision, manage, and observe a multi-environment Kubernetes ecosystem deployed on **AWS EKS** (Elastic Kubernetes Service).
 
@@ -42,13 +38,11 @@ It follows **2025 enterprise standards** emphasizing:
 
 ---
 
-## 🎯 Core Principles | Principios Fundamentales
+## Core Principles | Principios Fundamentales
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 - **Operación Declarativa**  
   Todos los componentes (infraestructura, cargas, políticas) se definen como código y se sincronizan usando GitOps.
@@ -64,8 +58,6 @@ It follows **2025 enterprise standards** emphasizing:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 - **Declarative Operations**  
   All components (infrastructure, workloads, policies) are defined as code and synchronized through GitOps.
@@ -85,7 +77,7 @@ It follows **2025 enterprise standards** emphasizing:
 
 ---
 
-## 📁 Repository Structure | Estructura del Repositorio
+## Repository Structure | Estructura del Repositorio
 
 ```
 infra/
@@ -110,12 +102,12 @@ infra/
 <tr>
 <td width="50%" valign="top">
 
-**🇧🇴** La estructura separa la lógica de plataforma, la configuración de ambientes, la observabilidad y la gobernanza. Cada módulo está versionado y manejado por controladores GitOps (Argo CD / Helm Controller).
+**** La estructura separa la lógica de plataforma, la configuración de ambientes, la observabilidad y la gobernanza. Cada módulo está versionado y manejado por controladores GitOps (Argo CD / Helm Controller).
 
 </td>
 <td width="50%" valign="top">
 
-**🇺🇸** The structure separates platform logic, environment configuration, observability, and governance. Each module is independently versioned and managed by GitOps controllers (Argo CD / Helm Controller).
+**** The structure separates platform logic, environment configuration, observability, and governance. Each module is independently versioned and managed by GitOps controllers (Argo CD / Helm Controller).
 
 </td>
 </tr>
@@ -123,13 +115,11 @@ infra/
 
 ---
 
-## ☁️ Cloud & IaC Layer | Capa de Nube e Infraestructura como Código
+## Cloud & IaC Layer | Capa de Nube e Infraestructura como Código
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 Terraform define los recursos base de AWS:
 
@@ -148,7 +138,6 @@ Terraform define los recursos base de AWS:
 </td>
 <td width="50%" valign="top">
 
-### 🇺🇸 English
 
 Terraform defines foundational AWS resources:
 
@@ -170,13 +159,11 @@ Terraform defines foundational AWS resources:
 
 ---
 
-## 🔁 GitOps Workflow | Flujo GitOps
+##  GitOps Workflow | Flujo GitOps
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 1. **CI construye y escanea contenedores** → los publica en ECR.
 
@@ -189,7 +176,6 @@ Terraform defines foundational AWS resources:
 </td>
 <td width="50%" valign="top">
 
-### 🇺🇸 English
 
 1. **CI builds and scans containers** → pushes to ECR.
 
@@ -205,13 +191,11 @@ Terraform defines foundational AWS resources:
 
 ---
 
-## 🛡️ Security Framework | Marco de Seguridad
+## Security Framework | Marco de Seguridad
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 - **Políticas de Ejecución**  
   Kyverno y OPA aplican el baseline de seguridad (no-root, FS de solo lectura, probes, límites).
@@ -227,8 +211,6 @@ Terraform defines foundational AWS resources:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 - **Runtime Policies**  
   Kyverno & OPA enforce pod security baseline (non-root, read-only FS, probes, limits).
@@ -248,13 +230,11 @@ Terraform defines foundational AWS resources:
 
 ---
 
-## 📊 Observability Stack | Pila de Observabilidad
+##  Observability Stack | Pila de Observabilidad
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 - **Métricas**  
   Prometheus + ServiceMonitors personalizados.
@@ -273,8 +253,6 @@ Terraform defines foundational AWS resources:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 - **Metrics**  
   Prometheus + custom ServiceMonitors.
@@ -297,13 +275,11 @@ Terraform defines foundational AWS resources:
 
 ---
 
-## 🌐 Networking & Ingress | Red y Entrada
+## Networking & Ingress | Red y Entrada
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 - **Ingress Controllers**  
   AWS Load Balancer Controller (ALB/NLB) + Cert-Manager.
@@ -316,8 +292,6 @@ Terraform defines foundational AWS resources:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 - **Ingress Controllers**  
   AWS Load Balancer Controller (ALB/NLB) + Cert-Manager.
@@ -340,8 +314,6 @@ Terraform defines foundational AWS resources:
 <tr>
 <td width="50%" valign="top">
 
-### 🇧🇴 Español (Bolivia)
-
 - **HPA**  
   Para servicios stateless.
 
@@ -359,8 +331,6 @@ Terraform defines foundational AWS resources:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 - **Horizontal Pod Autoscaler (HPA)**  
   For stateless services.
@@ -383,13 +353,11 @@ Terraform defines foundational AWS resources:
 
 ---
 
-## 📜 Compliance & Governance | Cumplimiento y Gobernanza
+## Compliance & Governance | Cumplimiento y Gobernanza
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 - **Validación Pre-merge**  
   Todos los manifests validados (política + esquema).
@@ -405,8 +373,6 @@ Terraform defines foundational AWS resources:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 - **Pre-merge Validation**  
   All manifests validated (policy + schema checks).
@@ -426,7 +392,7 @@ Terraform defines foundational AWS resources:
 
 ---
 
-## 🧰 Toolchain | Cadena de Herramientas
+## Toolchain | Cadena de Herramientas
 
 | **Domain** | **Tools** |
 |------------|----------|
@@ -440,13 +406,11 @@ Terraform defines foundational AWS resources:
 
 ---
 
-## 💰 AWS Cost Breakdown | Desglose de Costos AWS
+## AWS Cost Breakdown | Desglose de Costos AWS
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 Esta infraestructura usa **servicios AWS de nivel empresarial** con Rancher para el manejo de Kubernetes, resultando en costos premium debido a:
 
@@ -465,7 +429,6 @@ Esta infraestructura usa **servicios AWS de nivel empresarial** con Rancher para
 </td>
 <td width="50%" valign="top">
 
-### 🇺🇸 English
 
 This infrastructure uses **enterprise-grade AWS services** with Rancher for Kubernetes management, resulting in premium costs due to:
 
@@ -487,15 +450,13 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 
 ---
 
-## 💵 Cost Estimation by Scale | Estimación de Costos por Escala
+## Cost Estimation by Scale | Estimación de Costos por Escala
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🇧🇴 Español (Bolivia)
-
-#### 🏠 **Opción Básica - Pocos Usuarios**
+####  **Opción Básica - Pocos Usuarios**
 *Para startups o proyectos pequeños*
 
 - **EC2 t3.small/medium** con PM2: ~$15-30/mes
@@ -504,10 +465,10 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 - **Almacenamiento S3**: ~$5/mes
 - **Transferencia de datos**: ~$10/mes
 
-**💰 Total estimado: $60-80/mes**
+** Total estimado: $60-80/mes**
 
-✅ **Sirve para**: 100-500 usuarios concurrentes  
-⚠️ **Limitaciones**: Sin auto-escalado, sin alta disponibilidad, mantenimiento manual
+ **Sirve para**: 100-500 usuarios concurrentes  
+ **Limitaciones**: Sin auto-escalado, sin alta disponibilidad, mantenimiento manual
 
 ---
 
@@ -522,10 +483,10 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 - **ECR, Secrets, CloudWatch**: $50-100/mes
 - **Transferencia de datos**: $100-300/mes
 
-**💰 Total estimado: $700-1,700/mes**
+** Total estimado: $700-1,700/mes**
 
-✅ **Sirve para**: Miles de usuarios concurrentes  
-✅ **Beneficios**: Auto-escalado horizontal, alta disponibilidad 99.9%, recuperación automática, zero-downtime deployments
+ **Sirve para**: Miles de usuarios concurrentes  
+ **Beneficios**: Auto-escalado horizontal, alta disponibilidad 99.9%, recuperación automática, zero-downtime deployments
 
 ---
 
@@ -534,9 +495,8 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 </td>
 <td width="50%" valign="top">
 
-### 🇺🇸 English
 
-#### 🏠 **Basic Option - Few Users**
+####  **Basic Option - Few Users**
 *For startups or small projects*
 
 - **EC2 t3.small/medium** with PM2: ~$15-30/month
@@ -545,10 +505,10 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 - **S3 Storage**: ~$5/month
 - **Data Transfer**: ~$10/month
 
-**💰 Estimated Total: $60-80/month**
+** Estimated Total: $60-80/month**
 
-✅ **Good for**: 100-500 concurrent users  
-⚠️ **Limitations**: No auto-scaling, no high availability, manual maintenance
+ **Good for**: 100-500 concurrent users  
+ **Limitations**: No auto-scaling, no high availability, manual maintenance
 
 ---
 
@@ -563,10 +523,10 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 - **ECR, Secrets, CloudWatch**: $50-100/month
 - **Data Transfer**: $100-300/month
 
-**💰 Estimated Total: $700-1,700/month**
+** Estimated Total: $700-1,700/month**
 
-✅ **Good for**: Thousands of concurrent users  
-✅ **Benefits**: Horizontal auto-scaling, 99.9% high availability, automatic recovery, zero-downtime deployments
+ **Good for**: Thousands of concurrent users  
+ **Benefits**: Horizontal auto-scaling, 99.9% high availability, automatic recovery, zero-downtime deployments
 
 ---
 
@@ -577,13 +537,12 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 </table>
 
 ---
-## 🚀 Deployment Strategy | Estrategia de Despliegue
+## Deployment Strategy | Estrategia de Despliegue
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🇧🇴 Español (Bolivia)
 
 1. **El pipeline CI** construye → escanea → publica en ECR.
 
@@ -596,7 +555,6 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 </td>
 <td width="50%" valign="top">
 
-### 🇺🇸 English
 
 1. **CI pipeline** builds → scans → publishes to ECR.
 
@@ -618,8 +576,6 @@ This infrastructure uses **enterprise-grade AWS services** with Rancher for Kube
 <tr>
 <td width="50%" valign="top">
 
-### 🇧🇴 Español (Bolivia)
-
 **Lens funciona como el plano visual de control para clusters EKS.**
 
 Permite:
@@ -630,8 +586,6 @@ Permite:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 **Lens acts as the visual control plane for EKS clusters.**
 
@@ -647,13 +601,11 @@ Operators can:
 
 ---
 
-## 📚 Documentation | Documentación
+##  Documentation | Documentación
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 Toda la documentación arquitectónica y operativa se encuentra en `/docs`:
 
@@ -665,8 +617,6 @@ Toda la documentación arquitectónica y operativa se encuentra en `/docs`:
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 All architectural and operational documents are under `/docs`:
 
@@ -688,14 +638,11 @@ All architectural and operational documents are under `/docs`:
 <tr>
 <td width="50%" valign="top">
 
-### 🇧🇴 Español (Bolivia)
 
 Una **plataforma de nivel producción, declarativa y basada en GitOps** — que combina aprovisionamiento con Terraform, orquestación con Argo CD y un ambiente EKS reforzado con observabilidad, escalabilidad y cumplimiento integrados.
 
 </td>
 <td width="50%" valign="top">
-
-### 🇺🇸 English
 
 A **production-grade, declarative, and GitOps-driven platform** — combining Terraform provisioning, Argo CD orchestration, and a hardened EKS runtime with complete observability, scalability, and compliance baked in.
 
@@ -709,12 +656,12 @@ A **production-grade, declarative, and GitOps-driven platform** — combining Te
 
 ---
 
-### 👨‍💻 Architecture & Design
+###  Architecture & Design
 
 **YovanEnovore**
 
-📧 [yovanuxf@gmail.com](mailto:yovanuxf@gmail.com)  
-🌐 [https://ynvbo.site](https://ynvbo.site)
+ [yovanuxf@gmail.com](mailto:yovanuxf@gmail.com)  
+ [https://ynvbo.site](https://ynvbo.site)
 
 ---
 
