@@ -1,6 +1,6 @@
 <div align="center">
 
-# 💰 Comparativa de Precios - Proveedores de Hosting & Cloud
+# Comparativa de Precios - Proveedores de Hosting & Cloud
 ### Hosting Providers Pricing Comparison
 
 **Top 50 Proveedores Globales**
@@ -9,13 +9,11 @@
 
 </div>
 
-## 🎯 Guía Rápida | Quick Guide
+## Guía Rápida | Quick Guide
 
 <table>
 <tr>
 <td width="50%" valign="top">
-
-### 🇧🇴 Español (Bolivia)
 
 Esta comparativa te ayuda a elegir el mejor proveedor según tu presupuesto y necesidades. Los precios son aproximados y pueden variar según la región y promociones.
 
